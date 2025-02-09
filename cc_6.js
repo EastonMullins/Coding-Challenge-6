@@ -34,3 +34,21 @@ let calculateBonus = (salary, performanceRating) => {
 }
 calculateBonus(5000, "Excellent"); // Expected output: "Bonus: $1000"
 calculateBonus(7000, "Good");  // Expected output: "Bonus: $700"
+
+//Task 4 Subscription Pricing Model
+
+function calculateSubscriptionCost(plan, months, discount = 0){
+    if (plan === "Basic"){
+        cost = (10 * months) - discount;
+}
+else if (plan === "Premium"){
+    cost = (20 * months) - discount;
+}
+else if (plan === "Enterprise"){
+    cost = (50 * months) - discount;
+}
+let subscriptionCost = (plan * months) - discount
+console.log(`Subscription Cost: $${cost}`);
+}
+calculateSubscriptionCost("Basic", 6, 10); //Expected output "Subscription Cost: $50"
+calculateSubscriptionCost("Premium", 12, 0); // Expected output: "Subscription cost: $240"
