@@ -35,7 +35,7 @@ let calculateBonus = (salary, performanceRating) => {
 calculateBonus(5000, "Excellent"); // Expected output: "Bonus: $1000"
 calculateBonus(7000, "Good");  // Expected output: "Bonus: $700"
 
-//Task 4 Subscription Pricing Model
+//Task 4 - Subscription Pricing Model
 
 function calculateSubscriptionCost(plan, months, discount = 0){
     if (plan === "Basic"){
@@ -52,3 +52,12 @@ console.log(`Subscription Cost: $${cost}`);
 }
 calculateSubscriptionCost("Basic", 6, 10); //Expected output "Subscription Cost: $50"
 calculateSubscriptionCost("Premium", 12, 0); // Expected output: "Subscription cost: $240"
+
+//Task 5 - Currnecy Conversion
+
+function convertCurrency(amount, exchangeRate){
+    let convertedAmount = [amount * exchangeRate];
+    console.log(`Converted Amount: $${convertedAmount}`);
+}
+convertCurrency(100, 1.1); //Expected output "Converted Amount $110.00"
+convertCurrency(250, 0.85); //Expected output "Converted Amount $212.50"
